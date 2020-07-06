@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>规范 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/talking_blog/hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.cf544229.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.f797d0cc.js" as="script"><link rel="preload" href="/talking_blog/assets/js/9.fe8eafc2.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.744d6fbd.js"><link rel="prefetch" href="/talking_blog/assets/js/11.211133b9.js"><link rel="prefetch" href="/talking_blog/assets/js/3.4d3e46c0.js"><link rel="prefetch" href="/talking_blog/assets/js/4.de96a433.js"><link rel="prefetch" href="/talking_blog/assets/js/5.76761637.js"><link rel="prefetch" href="/talking_blog/assets/js/6.47c0bc0f.js"><link rel="prefetch" href="/talking_blog/assets/js/7.2636bc2c.js"><link rel="prefetch" href="/talking_blog/assets/js/8.8f747a6f.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link router-link-active">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link router-link-active">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/other/" aria-current="page" class="sidebar-link">日常随记</a></li><li><a href="/talking_blog/other/standard.html" aria-current="page" class="active sidebar-link">规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#项目目录结构规范" class="sidebar-link">项目目录结构规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#git分支管理规范" class="sidebar-link">git分支管理规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#功能开发工作流" class="sidebar-link">功能开发工作流</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#项目命名规范" class="sidebar-link">项目命名规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#代码风格规范" class="sidebar-link">代码风格规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#组件封装规范" class="sidebar-link">组件封装规范</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="规范"><a href="#规范" class="header-anchor">#</a> 规范</h1> <h2 id="项目目录结构规范"><a href="#项目目录结构规范" class="header-anchor">#</a> 项目目录结构规范</h2> <div class="language- extra-class"><pre class="language-text"><code>project
+| src
+  |__ components  // 公共组件
+  |__ pages // 路由页面
+      |__ components // 页面内业务组件
+      |__ ....... // 路由组件
+      |__ ....... // 每个业务模块下都应建立readme文档，命名为模块中文名，文档内容为模块需求简介
+  |__ router // 路由
+      |__ ...... // 路由目录结构请依照pages 目录结构，路由path 请使用目录路径加文件名
+      |__ index.js // 路由总出口
+  |__ store // 状态管理库
+      |__ modules //  状态模块
+          |__ type // getters , mutations, actions的命名，使用const常量声明，避免命名耦合
+          |__ ...... // 状态模块js
+      |__ index.js // 状态导出总出口
+  
+  |__ utils // 公共js库
+      |__ plugins // 全局插件
+  |__ assets // 静态资源库
+  
+</code></pre></div><h2 id="git分支管理规范"><a href="#git分支管理规范" class="header-anchor">#</a> git分支管理规范</h2> <blockquote><p>GIT工作流是团队协作积累的代码治理经验。在敏捷开发中，选择合理的、灵活的、可靠的代码管理方式，可优化产研各阶段的在制品数量限制并提高协作效率，保障生产安全。</p></blockquote> <p>这里我们采用的是 git 工作流管理规范</p> <div><img src="https://img-blog.csdnimg.cn/2020042518174011.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tpc2Nvbg==,size_16,color_FFFFFF,t_70"></div> <ul><li>Workspace：工作区</li> <li>Index / Stage：暂存区</li> <li>Repository：仓库区（或本地仓库）</li> <li>Remote：远程仓库</li></ul> <p>工作区：就是你在电脑上看到的目录，比如目录下testgit里的文件(.git隐藏目录版本库除外)。或者以后需要再新建的目录文件等等都属于工作区范畴。</p> <p>版本库(Repository)：工作区有一个隐藏目录.git，这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是stage(暂存区)，还有Git为我们自动创建了第一个分支master,以及指向master的一个指针HEAD。</p> <h2 id="功能开发工作流"><a href="#功能开发工作流" class="header-anchor">#</a> 功能开发工作流</h2> <blockquote><p>这种工作流关注功能开发，不直接往master提交代码保证它是稳定并且干净的，而是从master拉取feature分支进行功能开发，团队成员根据分工拉取不同的功能分支来进行不同的功能开发，这样就可以完全隔离开每个人的工作。当功能开发完成后，会向master分支发起Pull Request，只有审核通过的代码才真正允许合入master，这样就加强了团队成员之间的代码交流，也就是我们常说的Code Review。</p></blockquote> <h4 id="常驻分支"><a href="#常驻分支" class="header-anchor">#</a> 常驻分支</h4> <ul><li>master  --&gt; 代码备份分支</li> <li>prod --&gt; 生产分支（生产代码分支）</li> <li>pord-pre --&gt;分支 （预发布分支，代码上生产之前的最后一次验证分支，分子管理员负责检查合并的内容是否有漏或多余）</li> <li>uat --&gt; 测试分支 （测试人员用来验证需求分支）</li> <li>dev --&gt; 开发分支 （开发人员自测分支）</li> <li>prod-bug --&gt; 生产bug修复分支 （用以验证生产bug的修复情况）</li></ul> <h4 id="基本工作流程及分支权限说明"><a href="#基本工作流程及分支权限说明" class="header-anchor">#</a> 基本工作流程及分支权限说明</h4> <ol><li><p>开发分之命名规范— dev + 需求英文名称</p></li> <li><p>新建分之后需在wiki里写对应的分之说明</p></li> <li><p>分支管理流程</p> <ol><li>从prod 拉取开发分支—&gt;开发自测—&gt;提交测试</li> <li>测试完成之后—&gt; 开发提交分支合并请求（开发分支—&gt;prod-pre），测试进行发布前的最后一次回归测试—&gt;验收成果之后—&gt;prod-pre合并到prod (此步操作由仓库管理员进行，生产发布之后由管理员将生产分支合并到常驻分支)</li></ol></li> <li><p>项目上线之后的bug修复：</p> <ol><li>修复生产bug 需从生产分支拉取bug修复分支，命名规则bug + ‘bug描述’</li> <li>修复完成后发起分支合并需求bug分支到uat分支,测试验证</li> <li>测试验证完成之后，发起分支合并需求(bug —&gt; prod-bug)</li> <li>bug验证完成之后由仓库管理员将prod-bug分支合并到prod</li></ol></li> <li><p>prod-pre —&gt; prod ,  prod-bug —&gt; prod前必须打tag，必须写tag描述，描述内容为本次合并的主要内容</p></li></ol> <h2 id="项目命名规范"><a href="#项目命名规范" class="header-anchor">#</a> 项目命名规范</h2> <blockquote><p>文件夹命名 - 大驼峰法（UserInfo）</p></blockquote> <blockquote><p>文件命名 - 小驼峰法（userInfo）</p></blockquote> <blockquote><p>变量名命名规范
+必须使用小驼峰命名法，变量名应当使用名词，例如：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> userInfo <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">var</span> maxLength <span class="token operator">=</span> <span class="token number">10</span>
+
+</code></pre></div><blockquote><p>常量命名
+必须使用全部大写的下划线命名法，例如：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token constant">USER_INFO</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">const</span> <span class="token constant">MAX_LENGTH</span> <span class="token operator">=</span> <span class="token number">10</span>
+
+</code></pre></div><blockquote><p>函数命名
+必须使用camel命名法，例如：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getList</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>私有属性
+下划线 + 小驼峰，例如：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">_dataFormData</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token operator">...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">_initEvent</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>与关键字或框架私有属性冲突的方法命或属性命名
+$ + 下划线 + 关键字 例如：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">$_cancel</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token operator">...</span>
+  <span class="token punctuation">}</span>，
+  <span class="token function">$_render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
+
+</code></pre></div><blockquote><p>样式class命名
+用中划线分隔，例如：</p></blockquote> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>user-info-wrapper<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>head-box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>content-box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foot-box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="代码风格规范"><a href="#代码风格规范" class="header-anchor">#</a> 代码风格规范</h2> <p>js代码规范主要采用 eslint:recommended 推荐规则</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token string">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;indent&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 两个缩进，不符合规则的报错</span>
+    <span class="token string">&quot;semi&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 禁止使用分号</span>
+    <span class="token string">&quot;no-unused-vars&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 变量未使用提示</span>
+    <span class="token string">&quot;no-trailing-spaces&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">// 禁用行尾空格</span>
+    <span class="token string">&quot;quotes&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;single&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;avoid-escape&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 强制使用一致的反勾号、双引号或单引号 </span>
+    <span class="token string">&quot;space-before-blocks&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 强制在块之前使用一致的空格</span>
+    <span class="token string">&quot;space-before-function-paren&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 强制在 function的左括号之前使用一致的空格</span>
+    <span class="token string">&quot;space-in-parens&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&quot;never&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 强制在圆括号内使用一致的空格</span>
+    <span class="token string">&quot;space-infix-ops&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">// 要求操作符周围有空格</span>
+    <span class="token string">&quot;comma-spacing&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">&quot;before&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token string">&quot;after&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token comment">// 控制逗号前后的空格</span>
+    <span class="token string">&quot;eol-last&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">// 文件末尾强制换行</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>具体更多规则请参考<a href="http://eslint.cn/docs/rules/" target="_blank" rel="noopener noreferrer">eslint 规则文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="组件封装规范"><a href="#组件封装规范" class="header-anchor">#</a> 组件封装规范</h2> <h3 id="vue组件封装三要素"><a href="#vue组件封装三要素" class="header-anchor">#</a> vue组件封装三要素</h3> <ul><li>props</li> <li>slot</li> <li>events</li></ul> <ol><li>父组件传值子组件采用props</li> <li>子组件传递数据给父组件 events</li> <li>slot提供给用户自定义内容接口，使得组件高度自定义化</li></ol> <h3 id="组件的定义"><a href="#组件的定义" class="header-anchor">#</a> 组件的定义</h3> <ul><li>可复用的模块，完成既定功能</li> <li>有明确的接口规定</li> <li>有上下文依赖、外部依赖资源的定义</li> <li>可以独立发布</li></ul> <h3 id="组件设计的原则"><a href="#组件设计的原则" class="header-anchor">#</a> 组件设计的原则</h3> <ul><li>适用单一职责原则</li> <li>适用开放封闭原则（对扩展是开放的，而对修改是封闭的）</li> <li>避免太多参数</li> <li>追求无副作用 （无侵入式组件）</li> <li>避免暴露组件内部实现（组件内部的数据通过提供数据暴露的接口对外暴露）</li> <li>避免直接操作DOM</li> <li>组件无强制依赖</li> <li>入口处检查参数的有效性，出口处检查返回的正确性 (vue 组件的props数据类型校验)</li> <li>控制反转，依赖注入</li></ul> <h3 id="组件封装灵魂5问"><a href="#组件封装灵魂5问" class="header-anchor">#</a> 组件封装灵魂5问</h3> <p>在组件封装的时候，从如下几方面去考虑，引导完善组件的设计</p> <ul><li>组件是否有必要再拆分（组件颗粒度的问题）</li> <li>组件依赖是否可再缩减（对应上述的无强制依赖）</li> <li>是否对其他组件造成入侵（对应上述的无副作用）</li> <li>这个组件可否复用于其它类似场景中 (组件的复用性)</li> <li>这个组件当别人用时，会怎么想 （尽量让别人用起来简单易上手）</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/other/" class="prev router-link-active">
+        日常随记
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.cf544229.js" defer></script><script src="/talking_blog/assets/js/2.f797d0cc.js" defer></script><script src="/talking_blog/assets/js/9.fe8eafc2.js" defer></script>
+  </body>
+</html>

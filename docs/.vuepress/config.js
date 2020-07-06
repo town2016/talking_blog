@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Talking One',
   dest: 'vuepress',
+  base: '/talking_blog/',
   head: [
     ['link', { rel: 'icon', href: `/hero.png` }],
     // ['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -14,23 +15,11 @@ module.exports = {
   ],
   serviceWorker: true,
   // theme: 'vue',
-  
   themeConfig: {
     displayAllHeaders: true, // 默认值：false
     sidebar: {
-      '/vue': [
-        // {
-        //   title: 'assets',
-        //   path: '/guide/assets'
-        // },
-        // {
-        //   title: 'markdown',
-        //   path: '/guide/markdown'
-        // }, {
-        //   title: 'deploy',
-        //   path: 'guide/deploy'
-        // }
-      ]
+      '/vue/': getVueSideBar(),
+      '/other/': getOtherSideBar()
     },
     activeHeaderLinks: true,
     // repo: 'vuejs/vuepress',
@@ -47,38 +36,36 @@ module.exports = {
       },
       {
         text: 'Node',
-        link: '/node'
+        link: '/node/'
       },
       {
         text: 'Other',
-        link: '/other'
+        link: '/other/'
       }
     ]
   }
 }
 
-// function genSidebarConfig (title) {
-//   return [
-//     {
-//       title,
-//       collapsable: false,
-//       children: [
-//         '',
-//         'getting-started',
-//         'basic-config',
-//         'assets',
-//         'markdown',
-//         'using-vue',
-//         'custom-themes',
-//         'i18n',
-//         'deploy'
-//       ]
-//     }
-//   ]
-// }
-console.log(require.context)
-function getPageList () {
-  var list = require.context('./vue', true, /\.md/)
-  console.log(list)
+function getVueSideBar () {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+        'webpackChunkName'
+      ]
+    }
+  ]
 }
-// getPageList()
+function getOtherSideBar () {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+        'standard'
+      ]
+    }
+  ]
+}
+

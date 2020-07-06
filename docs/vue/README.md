@@ -1,6 +1,4 @@
----
-sidebar: auto
----
+
 # Vue
 <center>
   <img src="./logo.png" width="100px"/>

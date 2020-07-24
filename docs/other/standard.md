@@ -10,7 +10,7 @@ project
   |__ pages // 路由页面
       |__ components // 页面内业务组件
       |__ ....... // 路由组件
-      |__ ....... // 每个业务模块下都应建立readme文档，命名为模块中文名，文档内容为模块需求简介
+      |__ ....... // 每个业务模块下都应建立readme文档(绩效管理.md)，便于快速查找目录，命名为模块中文名，文档内容为模块需求简介
   |__ router // 路由
       |__ ...... // 路由目录结构请依照pages 目录结构，路由path 请使用目录路径加文件名
       |__ index.js // 路由总出口
@@ -78,7 +78,7 @@ project
 ## 项目命名规范
 > 文件夹命名 - 大驼峰法（UserInfo）
 
-> 文件命名 - 小驼峰法（userInfo）
+> 文件命名 - 大驼峰法（UserInfo）
 
 > 变量名命名规范
 必须使用小驼峰命名法，变量名应当使用名词，例如：
@@ -158,7 +158,38 @@ js代码规范主要采用 eslint:recommended 推荐规则
     "eol-last": 2, // 文件末尾强制换行
 }
 ```
+>js代码字符串使用单引号，html标签的属性使用双引号
+
 具体更多规则请参考[eslint 规则文档](http://eslint.cn/docs/rules/)
+
+## 前端路由规范
++ 路由路径必须与文件存放路径一致
++ 路由层级不宜嵌套过深（不宜超过三层）
++ 路由component必须采用异步加载
++ 路由必须定义webpackChunkName,同模块使用同一个webpackChunkName
+``` js
+const PersonAuth = () => import(/* webpackChunkName: 'auth' */ '@/pages/CommonSetting/PersonAuth/index.vue')
+const RoleManage = () => import(/* webpackChunkName: 'auth' */ '@/pages/CommonSetting/RoleManage/index.vue')
+
+export default {
+  {
+    path: 'person-auth',
+    name: 'personAuth',
+    component: PersonAuth,
+    meta: {
+      title: 'common_personAuth'
+    }
+  }, {
+    path: 'role-manage',
+    name: 'roleManage',
+    component: RoleManage,
+    meta: {
+      title: 'common_roleManage'
+    }
+  }
+}
+```
+
 
 ## 组件封装规范 
  ### vue组件封装三要素
@@ -167,12 +198,11 @@ js代码规范主要采用 eslint:recommended 推荐规则
   + events
  1. 父组件传值子组件采用props
  2. 子组件传递数据给父组件 events
- 3. slot提供给用户自定义内容接口，使得组件高度自定义化
+ 3. slot提供给用户自定义内容接口，使得组件高度自定义化 (或者提供render拓展api，具体视情况而定)
  
  ### 组件的定义
   + 可复用的模块，完成既定功能
   + 有明确的接口规定
-  + 有上下文依赖、外部依赖资源的定义
   + 可以独立发布
   
  ### 组件设计的原则

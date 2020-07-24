@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue最佳实战-路由解耦 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/talking_blog/hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.2763e6a4.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.f797d0cc.js" as="script"><link rel="preload" href="/talking_blog/assets/js/14.cfb788e2.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.ff8fd6d4.js"><link rel="prefetch" href="/talking_blog/assets/js/11.6264f99e.js"><link rel="prefetch" href="/talking_blog/assets/js/12.793de1c4.js"><link rel="prefetch" href="/talking_blog/assets/js/13.78683801.js"><link rel="prefetch" href="/talking_blog/assets/js/15.1517c365.js"><link rel="prefetch" href="/talking_blog/assets/js/3.25f0cb24.js"><link rel="prefetch" href="/talking_blog/assets/js/4.2bb4e152.js"><link rel="prefetch" href="/talking_blog/assets/js/5.76761637.js"><link rel="prefetch" href="/talking_blog/assets/js/6.698db2ed.js"><link rel="prefetch" href="/talking_blog/assets/js/7.26821184.js"><link rel="prefetch" href="/talking_blog/assets/js/8.8f747a6f.js"><link rel="prefetch" href="/talking_blog/assets/js/9.6049c968.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/vue/" aria-current="page" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#为什么选择vue" class="sidebar-link">为什么选择Vue</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#vue-学习" class="sidebar-link">Vue 学习</a></li></ul></li><li><a href="/talking_blog/vue/webpackChunkName.html" class="sidebar-link">webpackChunkName</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#spa按需加载的必要性" class="sidebar-link">SPA按需加载的必要性</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#什么是webpackchunkname" class="sidebar-link">什么是webpackChunkName</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#webpackchunkname的作用" class="sidebar-link">webpackChunkName的作用</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-组件更新.html" class="sidebar-link">Vue最佳实战-组件更新</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由切换，组件不变的三种解决方案" class="sidebar-link">路由切换，组件不变的三种解决方案</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由导航守卫-beforerouteupdate" class="sidebar-link">路由导航守卫 beforeRouteUpdate</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#监听路由对象（-route）的变化" class="sidebar-link">监听路由对象（$route）的变化</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#为router-view组件添加key属性" class="sidebar-link">为router-view组件添加key属性</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html" class="active sidebar-link">Vue最佳实战-路由解耦</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#路由props" class="sidebar-link">路由props</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#props的函数模式" class="sidebar-link">props的函数模式</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html" class="sidebar-link">Vue最佳实战-watch高阶应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#立即执行" class="sidebar-link">立即执行</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#触发监听执行多个方法" class="sidebar-link">触发监听执行多个方法</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#watch监听多个变量" class="sidebar-link">watch监听多个变量</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-hook.html" class="sidebar-link">Vue最佳实战-hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-hook.html#父组件监听子组件的生命周期" class="sidebar-link">父组件监听子组件的生命周期</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue最佳实战-路由解耦"><a href="#vue最佳实战-路由解耦" class="header-anchor">#</a> Vue最佳实战-路由解耦</h1> <p>相信很多人在开发用Vue做项目开发的时候都会使用动态路由，在路由后面带上动态参数；例如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/detail/:id'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'detail'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Detail<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>然后在项目中需要用到动态参数的时候呢就从$route中提取;</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">getDetail</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> id <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>当然，这么做呢完全是没有问题的，但是问题是你在你的组件中使用了$route对象。为什么说使用了$route对象是一个问题呢？</p> <p>因为这对你当前的组件来说相当于有了强依赖。从而限制了你当前组件只能在拥有路由的对象并且是带有动态参数的路由对象的组件中使用，这大大的限制了组件的灵活性。</p> <p>通常我们在疯转组件的时候都是提倡 <em><strong>无强制依赖和依赖注入</strong></em> 原则。那么这里我们想要解决的问题就是接触强制依赖。同时呢，在解决强依赖的同时我们仍然要保持我们组件的正常使用，
+那么解决问题的关键就在于后半句<strong>依赖注入</strong>；</p> <h2 id="路由props"><a href="#路由props" class="header-anchor">#</a> 路由props</h2> <p>通常呢，我们在开发Vue组件的时候最常用的数据注入的方法就是通过 <em><strong>props</strong></em> 了。所以呢，这里我也采用props来注入路由的动态次参数；</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/detail/:id'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'detail'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Detail<span class="token punctuation">,</span>
+    props<span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>是的，路由还可以这么写，只要你设置props之后，你的路由里的动态参数params里的属性能就全部可以被注入到组件的props里；所以呢，在组件里我们就可以这样去获取：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  props<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">getDetail</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> id <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>id
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样是不是就会方便多了呢？不但使你的组件对$route没有了强依赖么，还能让你在应用的地方写起来代码更简洁了。</p> <p>既然说到了这里，那我们就再深入的了解一下路由的props属性吧；</p> <h2 id="props的函数模式"><a href="#props的函数模式" class="header-anchor">#</a> props的函数模式</h2> <p>其实能，路由的props可不仅仅是一个boolean类型的属性，用来配置路由。其实它还可以是一个函数类型的属性；函数模式呢就给了我们很大发挥空间了。我们可以对路由的动态参数做一些列的处理之后在进行返回。这就很好玩了；</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/detail/:id'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'detail'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Detail<span class="token punctuation">,</span>
+    <span class="token function-variable function">props</span><span class="token operator">:</span> <span class="token parameter">route</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token operator">+</span>route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id <span class="token operator">+</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>这里我们就是对id参数做了一个数字类型的转化，然后进行了 + 1的操作；</p> <p>相信这在你的项目中还是很实用的，喜欢的就get去吧。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/vue/Vue最佳实战-组件更新.html" class="prev">
+        Vue最佳实战-组件更新
+      </a></span> <span class="next"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html">
+        Vue最佳实战-watch高阶应用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.2763e6a4.js" defer></script><script src="/talking_blog/assets/js/2.f797d0cc.js" defer></script><script src="/talking_blog/assets/js/14.cfb788e2.js" defer></script>
+  </body>
+</html>

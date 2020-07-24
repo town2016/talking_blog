@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue最佳实战-组件更新 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/talking_blog/hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.2763e6a4.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.f797d0cc.js" as="script"><link rel="preload" href="/talking_blog/assets/js/13.78683801.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.ff8fd6d4.js"><link rel="prefetch" href="/talking_blog/assets/js/11.6264f99e.js"><link rel="prefetch" href="/talking_blog/assets/js/12.793de1c4.js"><link rel="prefetch" href="/talking_blog/assets/js/14.cfb788e2.js"><link rel="prefetch" href="/talking_blog/assets/js/15.1517c365.js"><link rel="prefetch" href="/talking_blog/assets/js/3.25f0cb24.js"><link rel="prefetch" href="/talking_blog/assets/js/4.2bb4e152.js"><link rel="prefetch" href="/talking_blog/assets/js/5.76761637.js"><link rel="prefetch" href="/talking_blog/assets/js/6.698db2ed.js"><link rel="prefetch" href="/talking_blog/assets/js/7.26821184.js"><link rel="prefetch" href="/talking_blog/assets/js/8.8f747a6f.js"><link rel="prefetch" href="/talking_blog/assets/js/9.6049c968.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/vue/" aria-current="page" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#为什么选择vue" class="sidebar-link">为什么选择Vue</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#vue-学习" class="sidebar-link">Vue 学习</a></li></ul></li><li><a href="/talking_blog/vue/webpackChunkName.html" class="sidebar-link">webpackChunkName</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#spa按需加载的必要性" class="sidebar-link">SPA按需加载的必要性</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#什么是webpackchunkname" class="sidebar-link">什么是webpackChunkName</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#webpackchunkname的作用" class="sidebar-link">webpackChunkName的作用</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-组件更新.html" class="active sidebar-link">Vue最佳实战-组件更新</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由切换，组件不变的三种解决方案" class="sidebar-link">路由切换，组件不变的三种解决方案</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由导航守卫-beforerouteupdate" class="sidebar-link">路由导航守卫 beforeRouteUpdate</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#监听路由对象（-route）的变化" class="sidebar-link">监听路由对象（$route）的变化</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#为router-view组件添加key属性" class="sidebar-link">为router-view组件添加key属性</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html" class="sidebar-link">Vue最佳实战-路由解耦</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#路由props" class="sidebar-link">路由props</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#props的函数模式" class="sidebar-link">props的函数模式</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html" class="sidebar-link">Vue最佳实战-watch高阶应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#立即执行" class="sidebar-link">立即执行</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#触发监听执行多个方法" class="sidebar-link">触发监听执行多个方法</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#watch监听多个变量" class="sidebar-link">watch监听多个变量</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-hook.html" class="sidebar-link">Vue最佳实战-hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-hook.html#父组件监听子组件的生命周期" class="sidebar-link">父组件监听子组件的生命周期</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue最佳实战-组件更新"><a href="#vue最佳实战-组件更新" class="header-anchor">#</a> Vue最佳实战-组件更新</h1> <h2 id="路由切换，组件不变的三种解决方案"><a href="#路由切换，组件不变的三种解决方案" class="header-anchor">#</a> 路由切换，组件不变的三种解决方案</h2> <p>在使用vue开发项目有的时候，最常遇到的一个典型的问题就是，当页面切换到同一个路由，但参数不同的地址的时候，组件的生命周期钩子不会重新触发。
+例如，路由如下情况：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/detail/:id'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'detail'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Detail
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>当我们从/detail/1切换到/detail/2的时候，组件是不会发生任何变化的。但是我们期望的是在路遇参数变化的时候可以重新根据路由参拉取新数据，重新渲染组件。
+组件不会更新的原因是应为vue-router会识别出两个路由使用的是同一个组件，从而进行复用。并不会重新创建组件，因此组件的生命周期钩子函数自然不会被触发。</p> <p>组件的本质是一个映射关系，所以先销毁在重新创建一个相同的组件会存在很大程度上饿性能消耗，复用组件是正确的选择。<strong>但这意味着，组件的生命周期钩子不会被重新触发</strong></p> <p>我相信大家一定遇到过类似的场景，我为大家总结了三个方案，并说明优缺点，供大家选择。</p> <h2 id="路由导航守卫-beforerouteupdate"><a href="#路由导航守卫-beforerouteupdate" class="header-anchor">#</a> 路由导航守卫 beforeRouteUpdate</h2> <p>vue-router提供了组件导航守卫beforeRouteUpdate，该守卫在当前路由组件被复用的时候触发，可以我们可以利用这个导航守卫来解决问题。
+我们可以将需要被重新执行的函数或逻辑放到这个钩子中，当钩子被执行的时候，里面的方法及逻辑当然也会被重新触发了。
+这是我最推荐的方法。但是这样势必会造成代码的冗余。</p> <h2 id="监听路由对象（-route）的变化"><a href="#监听路由对象（-route）的变化" class="header-anchor">#</a> 监听路由对象（$route）的变化</h2> <p>通过watch来设置当前实例路由对象的变化，从而做出响应。例如：</p> <div class="language-js extra-class"><pre class="language-js"><code>watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">$route</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 执行需要调用的函数和逻辑</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这种方式可以解决上述问题，但是代价就是组件内多了一个watch，同时也会带来依赖追踪的内存消耗。
+如果是您采用了这种解决方案，请将监听设置到具体的动态参数，而不是直接监听整个$route。这可以减少很多不必要的消耗。例如：</p> <div class="language-js extra-class"><pre class="language-js"><code>watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token string">'$route.pramas.id'</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 执行需要调用的函数和逻辑</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这种方式我再推荐进行一次改造，可以减少一些代码量。例如：</p> <div class="language-js extra-class"><pre class="language-js"><code>watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token string">'$route.pramas.id'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">handler</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 执行需要调用的函数和逻辑</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    immediate<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">//立即执行</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这样我们就没有必要在其他的钩子函数中再去写一次相同的业务逻辑了</p> <h2 id="为router-view组件添加key属性"><a href="#为router-view组件添加key属性" class="header-anchor">#</a> 为router-view组件添加key属性</h2> <p>这是一种取巧的方法，而且非常暴力。他的本质就是利用VDom在渲染时通过key来对比两个节点是否相同的原理。通过给router-view添加key属性，每次切换路由的时候，key发生改变，这会让VDom以为router-view是一个全新的节点，从而每次都会先去销毁组件，然后在重新创建组件。即使是相同的组件，如果url变了，key也就发生了变化，组件就会重新创建。例如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>router<span class="token operator">-</span>view <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">&quot;$route.fullPath&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>view<span class="token operator">&gt;</span>
+</code></pre></div><p>这种方式坏处很明显，每次路由切换组件都是被销毁然后重新创建，非常的浪费性能。优点就是简单粗暴，有效，代码改动最小。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/vue/webpackChunkName.html" class="prev">
+        webpackChunkName
+      </a></span> <span class="next"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html">
+        Vue最佳实战-路由解耦
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.2763e6a4.js" defer></script><script src="/talking_blog/assets/js/2.f797d0cc.js" defer></script><script src="/talking_blog/assets/js/13.78683801.js" defer></script>
+  </body>
+</html>

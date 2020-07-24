@@ -70,3 +70,6 @@ _*讲到这里，我们开始进入我们的主角 webpackChunkName 的介绍�
 是的，es6中采用这种注解的方式来设置模块的chunkName,号称魔法注释，webpack通过增加内联注释来告诉runtime,该有怎样的行为。通过向import中添加注释，我们可以执行诸如命名chunk或选择不同模式之类的操作。
 
 
+## webpackChunkName的作用
+1. 模块打包命名
+2. 代码分割颗粒化控制

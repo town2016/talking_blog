@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue最佳实战-watch高阶应用 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/talking_blog/hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.2763e6a4.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.f797d0cc.js" as="script"><link rel="preload" href="/talking_blog/assets/js/12.793de1c4.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.ff8fd6d4.js"><link rel="prefetch" href="/talking_blog/assets/js/11.6264f99e.js"><link rel="prefetch" href="/talking_blog/assets/js/13.78683801.js"><link rel="prefetch" href="/talking_blog/assets/js/14.cfb788e2.js"><link rel="prefetch" href="/talking_blog/assets/js/15.1517c365.js"><link rel="prefetch" href="/talking_blog/assets/js/3.25f0cb24.js"><link rel="prefetch" href="/talking_blog/assets/js/4.2bb4e152.js"><link rel="prefetch" href="/talking_blog/assets/js/5.76761637.js"><link rel="prefetch" href="/talking_blog/assets/js/6.698db2ed.js"><link rel="prefetch" href="/talking_blog/assets/js/7.26821184.js"><link rel="prefetch" href="/talking_blog/assets/js/8.8f747a6f.js"><link rel="prefetch" href="/talking_blog/assets/js/9.6049c968.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/vue/" aria-current="page" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#为什么选择vue" class="sidebar-link">为什么选择Vue</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#vue-学习" class="sidebar-link">Vue 学习</a></li></ul></li><li><a href="/talking_blog/vue/webpackChunkName.html" class="sidebar-link">webpackChunkName</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#spa按需加载的必要性" class="sidebar-link">SPA按需加载的必要性</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#什么是webpackchunkname" class="sidebar-link">什么是webpackChunkName</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#webpackchunkname的作用" class="sidebar-link">webpackChunkName的作用</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-组件更新.html" class="sidebar-link">Vue最佳实战-组件更新</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由切换，组件不变的三种解决方案" class="sidebar-link">路由切换，组件不变的三种解决方案</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由导航守卫-beforerouteupdate" class="sidebar-link">路由导航守卫 beforeRouteUpdate</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#监听路由对象（-route）的变化" class="sidebar-link">监听路由对象（$route）的变化</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#为router-view组件添加key属性" class="sidebar-link">为router-view组件添加key属性</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html" class="sidebar-link">Vue最佳实战-路由解耦</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#路由props" class="sidebar-link">路由props</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#props的函数模式" class="sidebar-link">props的函数模式</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html" class="active sidebar-link">Vue最佳实战-watch高阶应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#立即执行" class="sidebar-link">立即执行</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#触发监听执行多个方法" class="sidebar-link">触发监听执行多个方法</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#watch监听多个变量" class="sidebar-link">watch监听多个变量</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-hook.html" class="sidebar-link">Vue最佳实战-hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-hook.html#父组件监听子组件的生命周期" class="sidebar-link">父组件监听子组件的生命周期</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue最佳实战-watch高阶应用"><a href="#vue最佳实战-watch高阶应用" class="header-anchor">#</a> Vue最佳实战-watch高阶应用</h1> <h2 id="立即执行"><a href="#立即执行" class="header-anchor">#</a> 立即执行</h2> <p><font color="#3eaf7c">watch</font> 是监听属性发生改变时才会触发，有些时候，我们希望在组件创建之后watch能够立即执行。可能很多人都是会在组件的create生命周期中调用一次，但是这样的写法个人感觉很不优雅，而且造成代码冗余。</p> <p>其实我们可以尝试这样写：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    mode<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      immediate<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="触发监听执行多个方法"><a href="#触发监听执行多个方法" class="header-anchor">#</a> 触发监听执行多个方法</h2> <p>如果你需要你的监听在被触发的时候执行多个函数呢其实我们可以有很多中玩法，可能我们最常见的就是在handler中写入多个函数的调用；</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    mode<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">changeStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getNewStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">changeStatus</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">getNewStatus</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>但是呢？这么写也会存在一定的局限性。那就是如果 <font color="#3eaf7c">getNewStatus</font> 是需要在一进来就立即执行，但是 <font color="#3eaf7c">changeStatus</font>是每次在变化的时候去触发该怎么办呢？难道又要走回原来的路子？在create钩子中去执行 <font color="#3eaf7c">getNewStatus</font>吗？</p> <p>在你看到这里之前呢，你也许一定会这么干，但是看完这里之后将为你打开一扇新的窗户；</p> <p>监听的字段属性可以是函数类型，可以是字符串类型，可以是对象类型。那么你有没有想过可以是数组类型的呢？答案是肯定的：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    mode<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">'changeStatus'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        handler<span class="token operator">:</span> <span class="token string">'getNewStatus'</span><span class="token punctuation">,</span>
+        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">changeStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">changeStatus</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">getNewStatus</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">setStatus</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>神奇不，数组中还可以支持函数，对象，字符串三种模式哦；</p> <h2 id="watch监听多个变量"><a href="#watch监听多个变量" class="header-anchor">#</a> watch监听多个变量</h2> <p><font color="#3eaf7c">watch</font> 本身呢是无法实现通过一个字段监听多个变量的。但是我们我们自己是不是可以奇技淫巧一把。
+主要的思路呢就是利用计算属性，我们可以将多个变量关联一个计算属性，然后监听这个计算属性，这样是不是就达到了通过一个字段来监听多个变量的目的呢：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      mode<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+      status<span class="token operator">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">modeAndStatus</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> <span class="token punctuation">{</span> mode<span class="token punctuation">,</span> status <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        mode<span class="token punctuation">,</span>
+        status
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    modeAndStatus<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span> <span class="token punctuation">(</span><span class="token parameter">newVal</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      deep<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html" class="prev">
+        Vue最佳实战-路由解耦
+      </a></span> <span class="next"><a href="/talking_blog/vue/Vue最佳实战-hook.html">
+        Vue最佳实战-hook
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.2763e6a4.js" defer></script><script src="/talking_blog/assets/js/2.f797d0cc.js" defer></script><script src="/talking_blog/assets/js/12.793de1c4.js" defer></script>
+  </body>
+</html>

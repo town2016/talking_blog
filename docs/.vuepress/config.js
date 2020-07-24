@@ -52,7 +52,12 @@ function getVueSideBar () {
       collapsable: false,
       children: [
         '',
-        'webpackChunkName'
+        'webpackChunkName',
+        'Vue最佳实战-组件更新',
+        'Vue最佳实战-路由参数解耦',
+        'Vue最佳实战-watch高阶应用',
+        'Vue最佳实战-hook',
+        'Vue最佳实战-路由自动化'
       ]
     }
   ]

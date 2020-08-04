@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue最佳实战-observable | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="../hero.png">
+    <link rel="apple-touch-icon" href="../hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.f8fc43ec.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.f797d0cc.js" as="script"><link rel="preload" href="/talking_blog/assets/js/12.7129fefe.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.ff8fd6d4.js"><link rel="prefetch" href="/talking_blog/assets/js/11.6264f99e.js"><link rel="prefetch" href="/talking_blog/assets/js/13.95951708.js"><link rel="prefetch" href="/talking_blog/assets/js/14.f79e5b26.js"><link rel="prefetch" href="/talking_blog/assets/js/15.6deb9e81.js"><link rel="prefetch" href="/talking_blog/assets/js/16.54fc920a.js"><link rel="prefetch" href="/talking_blog/assets/js/17.663179da.js"><link rel="prefetch" href="/talking_blog/assets/js/3.076071c4.js"><link rel="prefetch" href="/talking_blog/assets/js/4.2d7eeace.js"><link rel="prefetch" href="/talking_blog/assets/js/5.76761637.js"><link rel="prefetch" href="/talking_blog/assets/js/6.698db2ed.js"><link rel="prefetch" href="/talking_blog/assets/js/7.26821184.js"><link rel="prefetch" href="/talking_blog/assets/js/8.f14650bb.js"><link rel="prefetch" href="/talking_blog/assets/js/9.891fc315.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/vue/" aria-current="page" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#为什么选择vue" class="sidebar-link">为什么选择Vue</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#vue-学习" class="sidebar-link">Vue 学习</a></li></ul></li><li><a href="/talking_blog/vue/webpackChunkName.html" class="sidebar-link">webpackChunkName</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#spa按需加载的必要性" class="sidebar-link">SPA按需加载的必要性</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#什么是webpackchunkname" class="sidebar-link">什么是webpackChunkName</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#webpackchunkname的作用" class="sidebar-link">webpackChunkName的作用</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-组件更新.html" class="sidebar-link">Vue最佳实战-组件更新</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由切换，组件不变的三种解决方案" class="sidebar-link">路由切换，组件不变的三种解决方案</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由导航守卫-beforerouteupdate" class="sidebar-link">路由导航守卫 beforeRouteUpdate</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#监听路由对象（-route）的变化" class="sidebar-link">监听路由对象（$route）的变化</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#为router-view组件添加key属性" class="sidebar-link">为router-view组件添加key属性</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html" class="sidebar-link">Vue最佳实战-路由解耦</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#路由props" class="sidebar-link">路由props</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#props的函数模式" class="sidebar-link">props的函数模式</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html" class="sidebar-link">Vue最佳实战-watch高阶应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#立即执行" class="sidebar-link">立即执行</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#触发监听执行多个方法" class="sidebar-link">触发监听执行多个方法</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#watch监听多个变量" class="sidebar-link">watch监听多个变量</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-hook.html" class="sidebar-link">Vue最佳实战-hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-hook.html#父组件监听子组件的生命周期" class="sidebar-link">父组件监听子组件的生命周期</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由自动化.html" class="sidebar-link">Vue最佳实战-路由自动化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由自动化.html#路由自动化" class="sidebar-link">路由自动化</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-observable.html" class="active sidebar-link">Vue最佳实战-observable</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue最佳实战-observable"><a href="#vue最佳实战-observable" class="header-anchor">#</a> Vue最佳实战-observable</h1> <p>Vue.observable 是Vue2.6新增的特性</p> <h3 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h3> <ul><li><font color="#d63200">{Object} object</font></li></ul> <p>接收一个对象并返回一个对象，并使返回的这个对象可反应。并可以直接在 <em><strong>render函数</strong></em> 和 <em><strong>计算属性</strong></em> 中使用。当数据发生变化时，触发适当的更新。在你的项目规模比较小，感觉使用Vuex有点大材小用的时候，可以尝试使用 <em><strong>Vue.Observable</strong></em> 来替代；</p> <p>来看一个简单的 Demo ：</p> <h3 id="store-js"><a href="#store-js" class="header-anchor">#</a> store.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  observer<span class="token operator">:</span> Vue<span class="token punctuation">.</span><span class="token function">observable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'hello'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">setName</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>observer<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="test-component"><a href="#test-component" class="header-anchor">#</a> Test Component</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store.js'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">name</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> store<span class="token punctuation">.</span>observer<span class="token punctuation">.</span>name
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      store<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">'hello world'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><p>我们在 <em><strong>mounted</strong></em> 钩子中设置了一个五秒的定时器，五秒钟之后可以在视图中的 hello 更新为 hello world;</p> <p>这是不是很像我们Vuex呢？</p> <p>其实我们也可以像Vuex通过this来访问store;我们只需要改造一下我们的store.js，然后将它挂载到Vue实例上；</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token punctuation">{</span>
+  observer<span class="token operator">:</span> Vue<span class="token punctuation">.</span><span class="token function">observable</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'town'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">setName</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>observer<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">install</span> <span class="token punctuation">(</span><span class="token parameter">Vue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$store <span class="token operator">=</span> store
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>改造完成之后，我们在main.js中 use 一下就可以了；</p> <h3 id="main-js"><a href="#main-js" class="header-anchor">#</a> main.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store/store.js'</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>store<span class="token punctuation">)</span>
+
+</code></pre></div><p>OK ,到这里就大功告成了。我们就可以在我们任意组件中使用this.$tore了。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/vue/Vue最佳实战-路由自动化.html" class="prev">
+        Vue最佳实战-路由自动化
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.f8fc43ec.js" defer></script><script src="/talking_blog/assets/js/2.f797d0cc.js" defer></script><script src="/talking_blog/assets/js/12.7129fefe.js" defer></script>
+  </body>
+</html>

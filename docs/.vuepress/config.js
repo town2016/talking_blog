@@ -62,7 +62,8 @@ function getOtherSideBar () {
       collapsable: false,
       children: [
         '',
-        'standard'
+        'standard',
+        'dllplugin'
       ]
     }
   ]

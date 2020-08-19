@@ -63,7 +63,8 @@ function getOtherSideBar () {
       children: [
         '',
         'standard',
-        'dllplugin'
+        'dllplugin',
+        'themDark'
       ]
     }
   ]

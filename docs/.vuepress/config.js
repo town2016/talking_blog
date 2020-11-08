@@ -12,7 +12,8 @@ module.exports = {
     displayAllHeaders: true, // 默认值：false
     sidebar: {
       '/vue/': getVueSideBar(),
-      '/other/': getOtherSideBar()
+      '/other/': getOtherSideBar(),
+      '/react/': getReactSideBar()
     },
     activeHeaderLinks: true,
     // repo: 'vuejs/vuepress',
@@ -56,6 +57,21 @@ function getVueSideBar () {
     }
   ]
 }
+
+function getReactSideBar () {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+        'react-redux - Provider简单实现',
+        'react-redux - Connect简单实现'
+      ]
+    }
+  ]
+}
+
+
 function getOtherSideBar () {
   return [
     {

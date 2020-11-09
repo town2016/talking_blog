@@ -12,6 +12,7 @@ cd ./vuepress
 git init
 git add -A
 git commit -m '发布更新'
+git push
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f https://github.com/town2016/talking_blog.git master

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>react-redex - connect的简单实现 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="../hero.png">
+    <link rel="apple-touch-icon" href="../hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.fcaa16de.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.2bcc5ed6.js" as="script"><link rel="preload" href="/talking_blog/assets/js/17.cef576cd.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.fb580e0f.js"><link rel="prefetch" href="/talking_blog/assets/js/11.0e9c62a0.js"><link rel="prefetch" href="/talking_blog/assets/js/12.4d6f8e79.js"><link rel="prefetch" href="/talking_blog/assets/js/13.27bb9e4e.js"><link rel="prefetch" href="/talking_blog/assets/js/14.71b55d11.js"><link rel="prefetch" href="/talking_blog/assets/js/15.88fb825c.js"><link rel="prefetch" href="/talking_blog/assets/js/16.f8ea09d2.js"><link rel="prefetch" href="/talking_blog/assets/js/18.20d3e5f8.js"><link rel="prefetch" href="/talking_blog/assets/js/19.54e7be62.js"><link rel="prefetch" href="/talking_blog/assets/js/20.7db4c1f2.js"><link rel="prefetch" href="/talking_blog/assets/js/21.9ddbc576.js"><link rel="prefetch" href="/talking_blog/assets/js/22.beb81c9d.js"><link rel="prefetch" href="/talking_blog/assets/js/23.7c7c1db8.js"><link rel="prefetch" href="/talking_blog/assets/js/24.78582b75.js"><link rel="prefetch" href="/talking_blog/assets/js/25.2aab6d82.js"><link rel="prefetch" href="/talking_blog/assets/js/3.08140365.js"><link rel="prefetch" href="/talking_blog/assets/js/4.a7c5fc14.js"><link rel="prefetch" href="/talking_blog/assets/js/5.4a10e687.js"><link rel="prefetch" href="/talking_blog/assets/js/6.7f098cfa.js"><link rel="prefetch" href="/talking_blog/assets/js/7.758eac9b.js"><link rel="prefetch" href="/talking_blog/assets/js/8.70d3001c.js"><link rel="prefetch" href="/talking_blog/assets/js/9.9d1ca679.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link router-link-active">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/react/" aria-current="page" class="sidebar-link">react 学习笔记</a></li><li><a href="/talking_blog/react/react-redux - Provider简单实现.html" class="sidebar-link">react-redux 的 Provider简单实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/react/react-redux - Provider简单实现.html#provider的作用" class="sidebar-link">Provider的作用</a></li></ul></li><li><a href="/talking_blog/react/react-redux - Connect简单实现.html" class="active sidebar-link">react-redex - connect的简单实现</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="react-redex-connect的简单实现"><a href="#react-redex-connect的简单实现" class="header-anchor">#</a> react-redex - connect的简单实现</h1> <p><font color="#3eaf7c">connect</font> 是react-redux最核心的API，看名字就应该知道它的作用了。是的，它就是链接react和redux之间的桥梁，真正将redux的store注册为组件的props的方法。</p> <p>connect(mapStateToProps, mapDispatchToProps, mergeOptions, options) 参数：</p> <ul><li><p>mapStatwToProps:</p> <ol><li>必须是Function类型的，作用就是绑定 <font color="#3eaf7c">state</font> 的指定值到组件的props中
+<ul><li><font color="#3eaf7c">state</font>: 监听Redux store的变化。任何时候只要 Redux store发生改变，mapStateToProps 函数就会被调用,该回调函数必须返回一个纯对象，该对象会与相应展示组件的 props 合并</li></ul></li></ol></li> <li><p>mapDispatchToProps：
+1.</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/react/react-redux - Provider简单实现.html" class="prev">
+        react-redux 的 Provider简单实现
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.fcaa16de.js" defer></script><script src="/talking_blog/assets/js/2.2bcc5ed6.js" defer></script><script src="/talking_blog/assets/js/17.cef576cd.js" defer></script>
+  </body>
+</html>

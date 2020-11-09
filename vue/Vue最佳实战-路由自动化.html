@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue最佳实战-路由自动化 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="../hero.png">
+    <link rel="apple-touch-icon" href="../hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.fcaa16de.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.2bcc5ed6.js" as="script"><link rel="preload" href="/talking_blog/assets/js/24.78582b75.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.fb580e0f.js"><link rel="prefetch" href="/talking_blog/assets/js/11.0e9c62a0.js"><link rel="prefetch" href="/talking_blog/assets/js/12.4d6f8e79.js"><link rel="prefetch" href="/talking_blog/assets/js/13.27bb9e4e.js"><link rel="prefetch" href="/talking_blog/assets/js/14.71b55d11.js"><link rel="prefetch" href="/talking_blog/assets/js/15.88fb825c.js"><link rel="prefetch" href="/talking_blog/assets/js/16.f8ea09d2.js"><link rel="prefetch" href="/talking_blog/assets/js/17.cef576cd.js"><link rel="prefetch" href="/talking_blog/assets/js/18.20d3e5f8.js"><link rel="prefetch" href="/talking_blog/assets/js/19.54e7be62.js"><link rel="prefetch" href="/talking_blog/assets/js/20.7db4c1f2.js"><link rel="prefetch" href="/talking_blog/assets/js/21.9ddbc576.js"><link rel="prefetch" href="/talking_blog/assets/js/22.beb81c9d.js"><link rel="prefetch" href="/talking_blog/assets/js/23.7c7c1db8.js"><link rel="prefetch" href="/talking_blog/assets/js/25.2aab6d82.js"><link rel="prefetch" href="/talking_blog/assets/js/3.08140365.js"><link rel="prefetch" href="/talking_blog/assets/js/4.a7c5fc14.js"><link rel="prefetch" href="/talking_blog/assets/js/5.4a10e687.js"><link rel="prefetch" href="/talking_blog/assets/js/6.7f098cfa.js"><link rel="prefetch" href="/talking_blog/assets/js/7.758eac9b.js"><link rel="prefetch" href="/talking_blog/assets/js/8.70d3001c.js"><link rel="prefetch" href="/talking_blog/assets/js/9.9d1ca679.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/vue/" aria-current="page" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/#介绍" class="sidebar-link">介绍</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#为什么选择vue" class="sidebar-link">为什么选择Vue</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/#vue-学习" class="sidebar-link">Vue 学习</a></li></ul></li><li><a href="/talking_blog/vue/webpackChunkName.html" class="sidebar-link">webpackChunkName</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#spa按需加载的必要性" class="sidebar-link">SPA按需加载的必要性</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#什么是webpackchunkname" class="sidebar-link">什么是webpackChunkName</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/webpackChunkName.html#webpackchunkname的作用" class="sidebar-link">webpackChunkName的作用</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-组件更新.html" class="sidebar-link">Vue最佳实战-组件更新</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由切换，组件不变的三种解决方案" class="sidebar-link">路由切换，组件不变的三种解决方案</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#路由导航守卫-beforerouteupdate" class="sidebar-link">路由导航守卫 beforeRouteUpdate</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#监听路由对象（-route）的变化" class="sidebar-link">监听路由对象（$route）的变化</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-组件更新.html#为router-view组件添加key属性" class="sidebar-link">为router-view组件添加key属性</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html" class="sidebar-link">Vue最佳实战-路由解耦</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#路由props" class="sidebar-link">路由props</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由参数解耦.html#props的函数模式" class="sidebar-link">props的函数模式</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html" class="sidebar-link">Vue最佳实战-watch高阶应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#立即执行" class="sidebar-link">立即执行</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#触发监听执行多个方法" class="sidebar-link">触发监听执行多个方法</a></li><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-watch高阶应用.html#watch监听多个变量" class="sidebar-link">watch监听多个变量</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-hook.html" class="sidebar-link">Vue最佳实战-hook</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-hook.html#父组件监听子组件的生命周期" class="sidebar-link">父组件监听子组件的生命周期</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-路由自动化.html" class="active sidebar-link">Vue最佳实战-路由自动化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/vue/Vue最佳实战-路由自动化.html#路由自动化" class="sidebar-link">路由自动化</a></li></ul></li><li><a href="/talking_blog/vue/Vue最佳实战-observable.html" class="sidebar-link">Vue最佳实战-observable</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue最佳实战-路由自动化"><a href="#vue最佳实战-路由自动化" class="header-anchor">#</a> Vue最佳实战-路由自动化</h1> <p>在讲路由自动化的之前，我们先来介绍一个webpack的API -- <font color="#3eaf7c">require.context()</font>;</p> <div class="language-js extra-class"><pre class="language-js"><code>├── modules
+│   ├── CommonSetting
+│   │   ├── auth<span class="token punctuation">.</span>js
+│   │   └── routes<span class="token punctuation">.</span>js
+│   ├── designBSC
+│   │   └── routes<span class="token punctuation">.</span>js
+│   ├── performanceReview
+│   │   └── routes<span class="token punctuation">.</span>js
+│   └── targetPlan
+│       └── routes<span class="token punctuation">.</span>js
+└── index<span class="token punctuation">.</span>js
+
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 
+ * @param {String} a  // 需要读取文件的路径
+ * @param {Boolean} b // 是否遍历该文件下的所有子文件夹
+ * @param {Reg} c // 匹配文件的正则表达式
+ */</span>
+<span class="token keyword">var</span> routes <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">'./modules'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex">/routes.js/</span><span class="token punctuation">)</span>
+<span class="token comment">// 读取同级的modules目录，并且遍历目录下的所有子目录，找出所有的routes.js文件</span>
+</code></pre></div><p>值得注意的是，<font color="#3eaf7c">require.context()</font> 执行之后返回的是一个函数，这个函数有三个属性；</p> <ul><li>resolve {Function} -接受一个参数request,request为test文件夹下面匹配文件的相对路径,返回这个匹配文件相对于整个工程的相对路径</li> <li>keys {Function} -返回匹配成功模块的名字组成的数组</li> <li>id {String} -执行环境的id</li></ul> <p>我们常用的就是它的 <em><strong>keys</strong></em> 属性，keys属性是 Function 类型的。所以在使用的时候我们直接执行 <em><strong>keys</strong></em> 属性就行了，得到的是一个数组，数组中是我们读取到的所有匹配正则的某块的路径和名称。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> keys <span class="token operator">=</span> routes<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>keys<span class="token punctuation">)</span> <span class="token comment">// [&quot;./CommonSetting/routes.js&quot;, &quot;./designBSC/routes.js&quot;, &quot;./performanceReview/routes.js&quot;, &quot;./targetPlan/routes.js&quot;]</span>
+</code></pre></div><p>上面说到了，<font color="#3eaf7c">require.context()</font> 返回的是一个函数，既然你是一个函数我们自然就可以想到它是可以接受参数的。很显然，它肯定是可以接收参数的。它和 <em><strong>resolve</strong></em> 方法的req参数是一样的,即匹配的文件名的相对路径,而 <em><strong>routes</strong></em> 函数返回的是一个模块,这个模块才是真正我们需要的；</p> <div class="language-js extra-class"><pre class="language-js"><code>routes<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> module <span class="token operator">=</span> <span class="token function">routes</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">.</span>default
+  <span class="token comment">// module 即为每个routes.js要导出的内容</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>本来呢，我们一般在项目使用 <font color="#3eaf7c">require.context()</font> 并不是用来做自动化路由的；而是为了方便代码的管理，如果这个项目是多人协作的话，每个人都有自己负责的模块，每个模块都有自己的路由。但是router对外暴露的出口只有一个。总不能让每个新建一个路由模块之后都去 <em><strong>index.js</strong></em> 中都去引用一次新模块的路由文件吧。很显然这是不合理的。多人协作，每个人都去修改公共的模块，总会造成代码的冲突的。从项目代码的管理上这肯定是不允许的。所以，一开始我们使用 <font color="#3eaf7c">require.context()</font> 其实是为了解决该问题的。</p> <p>既然 <font color="#3eaf7c">require.context()</font> 这么强大，我们为什么只让它来做这么简单的事呢？这根本体现不了它太大的价值啊。</p> <h2 id="路由自动化"><a href="#路由自动化" class="header-anchor">#</a> 路由自动化</h2> <p>其实真正促使我想用它来做路由自动化的想法源于一次Nuxt框架的使用。用过Nuxt框架的人都应该知道，它是不需要你去写路由的，你只需要在你的pages文件夹下组织好自己的模块文件目录结构就好了。他会根据你的模块文件目录自动为你生成对应的路由；</p> <p>那么idea来了，我们的webpack项目也可以这么玩的。反正我们手撸前端路由的时候也是依据我们的业务模块的文件目录结构来了，而且我们还有神器 <font color="#3eaf7c">require.context()</font>，说干就干；</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">.</span>pages
+├── account
+│   ├── banks<span class="token punctuation">.</span>vue
+│   ├── cash<span class="token punctuation">.</span>vue
+│   └── recharge<span class="token punctuation">.</span>vue
+├── appNews
+│   ├── addNews<span class="token punctuation">.</span>vue
+│   ├── newsCenter<span class="token punctuation">.</span>vue
+│   └── newsEdit<span class="token punctuation">.</span>vue
+├── examroomOrder
+│   ├── orderDetail<span class="token punctuation">.</span>vue
+│   └── refund<span class="token punctuation">.</span>vue
+├── scheduling
+│   ├── addScheduling<span class="token punctuation">.</span>vue
+│   ├── published<span class="token punctuation">.</span>vue
+│   └── unpublished<span class="token punctuation">.</span>vue
+└── users
+    ├── roles<span class="token punctuation">.</span>vue
+    └── seting<span class="token punctuation">.</span>vue
+</code></pre></div><p><em><strong>Talk is cheap, show me the code</strong></em></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 在routerd的index.js中添加如下代码
+ */</span>
+
+<span class="token comment">// 读取pages下所有的Vue文件</span>
+<span class="token keyword">var</span> pages <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">'../pages'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex">/\.vue/</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> routeList <span class="token operator">=</span> pages<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> path<span class="token punctuation">,</span> component<span class="token punctuation">,</span> name
+	path <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+	path <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'.vue'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+	component <span class="token operator">=</span> <span class="token function">pages</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">.</span>default
+	name <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> <span class="token punctuation">{</span>
+		path<span class="token punctuation">,</span>
+		component<span class="token punctuation">,</span>
+		name
+	<span class="token punctuation">}</span>	
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>routeList<span class="token punctuation">)</span>
+<span class="token comment">/**
+  0: {path: &quot;/account/banks&quot;, component: {…}, name: &quot;banks&quot;}
+  1: {path: &quot;/account/cash&quot;, component: {…}, name: &quot;cash&quot;}
+  2: {path: &quot;/account/recharge&quot;, component: {…}, name: &quot;recharge&quot;}
+  3: {path: &quot;/appNews/addNews&quot;, component: {…}, name: &quot;addNews&quot;}
+  4: {path: &quot;/appNews/newsCenter&quot;, component: {…}, name: &quot;newsCenter&quot;}
+  5: {path: &quot;/appNews/newsEdit&quot;, component: {…}, name: &quot;newsEdit&quot;}
+  6: {path: &quot;/examroomOrder/orderDetail&quot;, component: {…}, name: &quot;orderDetail&quot;}
+  7: {path: &quot;/examroomOrder/refund&quot;, component: {…}, name: &quot;refund&quot;}
+  8: {path: &quot;/scheduling/addScheduling&quot;, component: {…}, name: &quot;addScheduling&quot;}
+  9: {path: &quot;/scheduling/published&quot;, component: {…}, name: &quot;published&quot;}
+  10: {path: &quot;/scheduling/unpublished&quot;, component: {…}, name: &quot;unpublished&quot;}
+  11: {path: &quot;/users/roles&quot;, component: {…}, name: &quot;roles&quot;}
+  12: {path: &quot;/users/seting&quot;, component: {…}, name: &quot;seting&quot;}
+*/</span>
+</code></pre></div><p>是不是看起来很眼熟呢？这不就是你手写的前端路由文件吗？</p> <p>当然，这里我们还可以改造一下，让我们的路由实现组件懒加载的</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> pages <span class="token operator">=</span> require<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token string">'../pages'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token regex">/\.vue/</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> routeList <span class="token operator">=</span> pages<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> path<span class="token punctuation">,</span> component<span class="token punctuation">,</span> name
+	path <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+	path <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'.vue'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+	<span class="token function-variable function">component</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../pages</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>path<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+	name <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> <span class="token punctuation">{</span>
+		path<span class="token punctuation">,</span>
+		component<span class="token punctuation">,</span>
+		name
+	<span class="token punctuation">}</span>	
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>还是那句老话，喜欢就get去吧 ！</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/vue/Vue最佳实战-hook.html" class="prev">
+        Vue最佳实战-hook
+      </a></span> <span class="next"><a href="/talking_blog/vue/Vue最佳实战-observable.html">
+        Vue最佳实战-observable
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.fcaa16de.js" defer></script><script src="/talking_blog/assets/js/2.2bcc5ed6.js" defer></script><script src="/talking_blog/assets/js/24.78582b75.js" defer></script>
+  </body>
+</html>

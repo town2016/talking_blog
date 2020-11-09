@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>我是如何做前端权限管理 | Talking One</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="../hero.png">
+    <link rel="apple-touch-icon" href="../hero.png">
+    <meta name="description" content="">
+    <link rel="preload" href="/talking_blog/assets/css/0.styles.80acb7a6.css" as="style"><link rel="preload" href="/talking_blog/assets/js/app.fcaa16de.js" as="script"><link rel="preload" href="/talking_blog/assets/js/2.2bcc5ed6.js" as="script"><link rel="preload" href="/talking_blog/assets/js/6.7f098cfa.js" as="script"><link rel="prefetch" href="/talking_blog/assets/js/10.fb580e0f.js"><link rel="prefetch" href="/talking_blog/assets/js/11.0e9c62a0.js"><link rel="prefetch" href="/talking_blog/assets/js/12.4d6f8e79.js"><link rel="prefetch" href="/talking_blog/assets/js/13.27bb9e4e.js"><link rel="prefetch" href="/talking_blog/assets/js/14.71b55d11.js"><link rel="prefetch" href="/talking_blog/assets/js/15.88fb825c.js"><link rel="prefetch" href="/talking_blog/assets/js/16.f8ea09d2.js"><link rel="prefetch" href="/talking_blog/assets/js/17.cef576cd.js"><link rel="prefetch" href="/talking_blog/assets/js/18.20d3e5f8.js"><link rel="prefetch" href="/talking_blog/assets/js/19.54e7be62.js"><link rel="prefetch" href="/talking_blog/assets/js/20.7db4c1f2.js"><link rel="prefetch" href="/talking_blog/assets/js/21.9ddbc576.js"><link rel="prefetch" href="/talking_blog/assets/js/22.beb81c9d.js"><link rel="prefetch" href="/talking_blog/assets/js/23.7c7c1db8.js"><link rel="prefetch" href="/talking_blog/assets/js/24.78582b75.js"><link rel="prefetch" href="/talking_blog/assets/js/25.2aab6d82.js"><link rel="prefetch" href="/talking_blog/assets/js/3.08140365.js"><link rel="prefetch" href="/talking_blog/assets/js/4.a7c5fc14.js"><link rel="prefetch" href="/talking_blog/assets/js/5.4a10e687.js"><link rel="prefetch" href="/talking_blog/assets/js/7.758eac9b.js"><link rel="prefetch" href="/talking_blog/assets/js/8.70d3001c.js"><link rel="prefetch" href="/talking_blog/assets/js/9.9d1ca679.js">
+    <link rel="stylesheet" href="/talking_blog/assets/css/0.styles.80acb7a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/talking_blog/" class="home-link router-link-active"><!----> <span class="site-name">Talking One</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link router-link-active">
+  Other
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/talking_blog/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/talking_blog/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/talking_blog/node/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/talking_blog/other/" class="nav-link router-link-active">
+  Other
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/talking_blog/other/" aria-current="page" class="sidebar-link">日常随记</a></li><li><a href="/talking_blog/other/standard.html" class="sidebar-link">规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#项目目录结构规范" class="sidebar-link">项目目录结构规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#git分支管理规范" class="sidebar-link">git分支管理规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#功能开发工作流" class="sidebar-link">功能开发工作流</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#项目命名规范" class="sidebar-link">项目命名规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#代码风格规范" class="sidebar-link">代码风格规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#前端路由规范" class="sidebar-link">前端路由规范</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/standard.html#组件封装规范" class="sidebar-link">组件封装规范</a></li></ul></li><li><a href="/talking_blog/other/dllplugin.html" class="sidebar-link">webpack 打包优化 - DllPlugin</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/other/dllplugin.html#插件安装" class="sidebar-link">插件安装</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/dllplugin.html#编写dllplugin的配置文件" class="sidebar-link">编写Dllplugin的配置文件</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/dllplugin.html#配置webpack-dllreferenceplugin" class="sidebar-link">配置webpack.DllReferencePlugin</a></li></ul></li><li><a href="/talking_blog/other/themDark.html" class="sidebar-link">一键切换暗黑模式</a></li><li><a href="/talking_blog/other/系统前端权限管理.html" class="active sidebar-link">我是如何做前端权限管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/other/系统前端权限管理.html#权限控制指令-v-auth" class="sidebar-link">权限控制指令(v-auth)</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/系统前端权限管理.html#利用指令录入接口" class="sidebar-link">利用指令录入接口</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/系统前端权限管理.html#如何在axios做接口权限校验" class="sidebar-link">如何在axios做接口权限校验</a></li></ul></li><li><a href="/talking_blog/other/eslint自动校验修复.html" class="sidebar-link">eslint自动校验/修复</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/other/eslint自动校验修复.html#准备工作" class="sidebar-link">准备工作</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/eslint自动校验修复.html#配置eslint-rules" class="sidebar-link">配置eslint rules</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/eslint自动校验修复.html#git-hook" class="sidebar-link">git hook</a></li></ul></li><li><a href="/talking_blog/other/git提交自动化脚本.html" class="sidebar-link">git提交自动化脚本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/talking_blog/other/git提交自动化脚本.html#前提" class="sidebar-link">前提</a></li><li class="sidebar-sub-header"><a href="/talking_blog/other/git提交自动化脚本.html#脚本开发" class="sidebar-link">脚本开发</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="我是如何做前端权限管理"><a href="#我是如何做前端权限管理" class="header-anchor">#</a> 我是如何做前端权限管理</h1> <p>业务系统的开发权限控制是必不可少的。权限控制又分为前端权限，后段权限，接口权限和数据权限。</p> <p>一般接口的权限和数据的权限都是由后段开发者来控制的。前端的权限控制范围一般在系统菜单，按钮以及前端请求上。权限设置及分配的流程一般都是通过人员关联角色，角色关联菜单，菜单关联按钮及接口：</p> <img src="/talking_blog/assets/img/auth-desc.939382a4.jpg"> <p>上图描述了一个完整的系统权限管理所涉及的内容以及实现权限控制的技术实现。同时也可以看出，做一个业务系统的权限控制，还是需要做一部分基础配置工作的。这部分工作量是不可避免的。其中最为繁重的工作量其实就是在菜单按钮的录入工作以及按钮与接口关联工作。因为按钮显隐性/可点击行的控制主要根据按钮点击触发的接口请求来控制。所以需要建立按钮与接口的关联性，这也是一个不可避免的手工维护的工作。而且是一个长期的工作，只要项目还在开发或者迭代，这个工作基本是不可避免的。</p> <p>其实讲到这里，本文的目的已经很明显了，其实就是节省前端权限维护的工作量的问题。</p> <ul><li>前端按钮，接口的录入工作</li> <li>按钮与接口关联</li></ul> <h2 id="权限控制指令-v-auth"><a href="#权限控制指令-v-auth" class="header-anchor">#</a> 权限控制指令(v-auth)</h2> <p>我们通过全局自定义指令来做我们的前端按钮控制。这里的前端按钮并不是狭义的Button，泛指一切可点击且会触发接口请求的elementNode。我们通过给这些按钮添加自定义的指令(v-auth)来控制接按钮可点击性。针对Button我们可以直接设置disabled属性。针对那些非Button该如何出呢？这里简单给大家介绍一个非常实用的css小技巧，来屏蔽元素的操作事件。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.custom_disabled</span> <span class="token punctuation">{</span>
+  <span class="token property">pointer-event</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #DDD<span class="token punctuation">;</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> 0.8<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><em><strong>pointer-event:none;</strong></em></p> <ol><li>阻止用户的点击动作产生任何效果</li> <li>阻止缺省鼠标指针的显示</li> <li>阻止CSS里的hover和active状态的变化触发事件</li> <li>阻止JavaScript点击动作触发的事件</li></ol> <p>接下来我们看一下我们的自定义指令</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// v-auth， 首先我们采用的管理员角色登陆系统，拥有所有的接口和按钮权限,只要录入按钮和接口，就会立马被分配给管理员</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">inserted</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token punctuation">,</span> <span class="token punctuation">{</span> value <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> context <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// value 为v-auth接收的值，我这里是通过接口的url来做按钮和接口的关联的，所以value === url</span>
+      <span class="token keyword">var</span> store <span class="token operator">=</span> context<span class="token punctuation">.</span>$store
+      <span class="token comment">// 用户登陆之后根据角色获取权限集合，存储在vuex中</span>
+      <span class="token keyword">var</span> authMap <span class="token operator">=</span> store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>authMap
+      <span class="token comment">// 判断用户权限是否存在该按钮的权限</span>
+      <span class="token keyword">var</span> hasAuth <span class="token operator">=</span> authMap<span class="token punctuation">[</span>value<span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>hasAuth<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>el<span class="token punctuation">.</span>tagName <span class="token operator">===</span> <span class="token string">'BUTTON'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 按钮禁用</span>
+          el<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'disabled'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 其他元素添加禁用样式，阻止用户的点击动作产生任何效果</span>
+          el<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'custom_disabled'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 判断如果管理员没有该接口权限，执行添加权限操作</span>
+        <span class="token keyword">var</span> <span class="token punctuation">{</span> path<span class="token punctuation">,</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> context<span class="token punctuation">.</span>$route
+        <span class="token comment">// 组合接口录入的参数</span>
+        <span class="token keyword">var</span> params <span class="token operator">=</span> <span class="token punctuation">{</span>
+          auth<span class="token operator">:</span> value<span class="token punctuation">,</span>
+          menu<span class="token operator">:</span> path<span class="token punctuation">,</span>
+          menuName<span class="token operator">:</span> name<span class="token punctuation">,</span>
+          name<span class="token operator">:</span> nameZH
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 调用录入的方法</span>
+        window<span class="token punctuation">.</span><span class="token constant">AUTH_STORE</span><span class="token punctuation">.</span><span class="token function">addAuth</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="利用指令录入接口"><a href="#利用指令录入接口" class="header-anchor">#</a> 利用指令录入接口</h2> <p><em><strong>window.AUTH_STORE</strong></em> 是接口录入的具体实现对象</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'../store/index.js'</span>
+<span class="token comment">// 导入更新用户权限的方法</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>getUsetMenuList<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api/login.js'</span>
+<span class="token keyword">class</span> <span class="token class-name">AuthStore</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 等待录入的接口</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>awaitCreateBtn <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token comment">// 录入失败的接口</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>cerateErrorBtn <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 添加未上传的权限接口</span>
+  <span class="token function">addAuth</span> <span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> code <span class="token operator">=</span> params<span class="token punctuation">.</span>auth<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>'_<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>awaitCreateBtn<span class="token punctuation">[</span>code<span class="token punctuation">]</span> <span class="token operator">=</span> params
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      window<span class="token punctuation">.</span><span class="token function">clearTimeout</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timer<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">implement</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">//  执行添录入操作, 因为考虑录入失败的情况，这里我们采取递归来一个个的录入接口，我们需要捕获那些权限录入失败，并缓起来。</span>
+  <span class="token function">implement</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>awaitCreateBtn<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>keys<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 当前任务执行完成的时候，输出录入失败的权限</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>cerateErrorBtn<span class="token punctuation">)</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> curKey <span class="token operator">=</span> keys<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">var</span> params <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>awaitCreateBtn<span class="token punctuation">[</span>curKey<span class="token punctuation">]</span>
+    <span class="token comment">// 录入接口</span>
+    axios<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/api/menu'</span><span class="token punctuation">,</span> params<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//  删除authStore里的缓存</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">deleteAuth</span><span class="token punctuation">(</span>curKey<span class="token punctuation">)</span>
+        <span class="token comment">// 更新权限缓存</span>
+        <span class="token keyword">await</span> <span class="token function">getMenuList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">implement</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>cerateErrorBtn<span class="token punctuation">[</span>curKey<span class="token punctuation">]</span> <span class="token operator">=</span> params
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 删除添加成功的auth</span>
+  <span class="token function">deleteAuth</span> <span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>awaitCreateBtn<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">delete</span> <span class="token keyword">this</span><span class="token punctuation">.</span>awaitCreateBtn<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+window<span class="token punctuation">.</span><span class="token constant">AUTH_STORE</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AuthStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>通过以上代码，我们就可以简单的做到了接口自动录入了，在开发过程中可以大大的降低工作量。因为接口跟按钮的关联这部分工作量无法避免，所以，就只能利用在做这份工作的时候把我们的接口自动录入到系统中。</p> <h2 id="如何在axios做接口权限校验"><a href="#如何在axios做接口权限校验" class="header-anchor">#</a> 如何在axios做接口权限校验</h2> <p>axios已经前端开发的标配了，所以，我们可以通过对ajax的请求做拦截，来做接口的权限校验；判断接口是否存在，不存在则取消接口请求</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'@/store/store.js'</span>
+<span class="token comment">// 获取axios的CancelToken</span>
+<span class="token keyword">const</span> CancelToken <span class="token operator">=</span> axios<span class="token punctuation">.</span>CancelToken
+<span class="token keyword">const</span> source <span class="token operator">=</span> CancelToken<span class="token punctuation">.</span><span class="token function">source</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> authMap <span class="token operator">=</span> store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>authMap
+<span class="token keyword">var</span> $http <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+$http<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 给每个请求添加唯一标示</span>
+  config<span class="token punctuation">.</span>cancelToken <span class="token operator">=</span> source<span class="token punctuation">.</span>token
+  <span class="token comment">// 判断如果接口不存在，取消请求</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>authMap<span class="token punctuation">[</span>config<span class="token punctuation">.</span>url<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    source<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/talking_blog/other/themDark.html" class="prev">
+        一键切换暗黑模式
+      </a></span> <span class="next"><a href="/talking_blog/other/eslint自动校验修复.html">
+        eslint自动校验/修复
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/talking_blog/assets/js/app.fcaa16de.js" defer></script><script src="/talking_blog/assets/js/2.2bcc5ed6.js" defer></script><script src="/talking_blog/assets/js/6.7f098cfa.js" defer></script>
+  </body>
+</html>

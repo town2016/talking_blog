@@ -12,7 +12,8 @@ module.exports = {
     displayAllHeaders: true, // 默认值：false
     sidebar: {
       '/vue/': getVueSideBar(),
-      '/other/': getOtherSideBar()
+      '/other/': getOtherSideBar(),
+      '/node/': getNodeSideBar()
     },
     activeHeaderLinks: true,
     // repo: 'vuejs/vuepress',
@@ -64,7 +65,20 @@ function getOtherSideBar () {
         '',
         'standard',
         'dllplugin',
-        'themDark'
+        'themDark',
+        '系统前端权限管理',
+        'eslint自动校验修复',
+        'git提交自动化脚本'
+      ]
+    }
+  ]
+}
+function getNodeSideBar () {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '前端国际化'
       ]
     }
   ]
